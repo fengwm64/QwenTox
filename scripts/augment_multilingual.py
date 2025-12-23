@@ -6,7 +6,7 @@ from tqdm import tqdm
 import argparse
 
 # Configuration
-API_KEY = "sk-4dc5b1238358468a9d37ee4a2893b42d"
+API_KEY = "sk-xxxx"
 BASE_URL = "https://api.deepseek.com" 
 MODEL = "deepseek-chat"
 
