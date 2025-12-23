@@ -1,0 +1,14 @@
+pandas
+matplotlib
+seaborn
+numpy
+wordcloud
+jupyter
+modelscope
+transformers
+tiktoken
+datasets
+scikit-learn
+swanlab
+accelerate>=0.26.0
+peft

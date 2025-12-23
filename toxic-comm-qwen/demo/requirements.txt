@@ -1,0 +1,8 @@
+torch
+transformers>=4.40.0
+peft
+gradio
+accelerate
+matplotlib
+pandas
+huggingface_hub

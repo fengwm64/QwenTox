@@ -1,0 +1,47 @@
+{
+  "model_name_or_path": "/home/fwm/projects/Toxic-comment-classification/models/ar_models/qwen/Qwen3-0.6B-Base",
+  "data_dir": "/home/fwm/projects/Toxic-comment-classification/data/jigsaw-toxic-comment",
+  "output_dir": "/home/fwm/projects/Toxic-comment-classification/toxic-comm-qwen/results/Qwen0.6B-lora-final",
+  "seed": 8888,
+  "do_train": true,
+  "do_eval": true,
+
+  "per_device_train_batch_size": 16,
+  "per_device_eval_batch_size": 64,
+  "gradient_accumulation_steps": 8,
+
+  "loss_type": "focal",
+  "focal_loss_gamma": 1.5,
+  "focal_loss_alpha": 0.65,
+
+  "learning_rate": 5e-5,
+  "lr_scheduler_type": "cosine",
+  "num_train_epochs": 3,
+  "warmup_ratio": 0.15,
+  "weight_decay": 0.1,
+  "max_grad_norm": 0.3,
+
+  "classifier_dropout": 0.3,
+
+  "use_lora": true,
+  "lora_r": 128,
+  "lora_alpha": 256,
+  "lora_dropout": 0.3,
+  "lora_target_modules": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
+
+  "max_seq_length": 384,
+
+  "logging_steps": 10,
+  "save_strategy": "steps",
+  "save_steps": 100,
+  "save_total_limit": 8,
+  "eval_strategy": "steps",
+  "eval_steps": 100,
+  "bf16": true,
+  "ddp_find_unused_parameters": false,
+  "overwrite_output_dir": true,
+  "use_swanlab": true,
+  "swanlab_project": "Toxic-Comm-Qwen",
+  "swanlab_workspace": "ddl",
+  "swanlab_experiment_name": "Qwen0.6B-lora-final"
+}
